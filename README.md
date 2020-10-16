@@ -1,2 +1,2 @@
 # RFID-absensi
-pengembangan rfid untuk kebutuhan absens
+pengembangan rfid untuk kebutuhan absensi dengan menggunakan teknologi berbasis kartu yang memiliki chip untuk memudahkan dalam absensi dan penggunaan bahan
