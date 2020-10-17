@@ -64,13 +64,13 @@ void loop()
     tone(BUZZER, 500);
     delay(300);
     tone(BUZZER, 400);
-    delay(300);
+    delay(300); //delay 300 milisecond
     tone(BUZZER, 300);
     delay(300);
     noTone(BUZZER);
     digitalWrite(LED_G, LOW);
     myServo.write(0);
-    delay(5000);
+    delay(5000); //delay 5 second
     myServo.write(70);
   }
  
