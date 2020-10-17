@@ -42,6 +42,8 @@ void loop()
     return;
      //Menampilkan UID TAG Di Serial Monitor
      Serial.print("UID tag :");
+     String content= "";
+     byte letter;
    
   }
      Serial.print(mfrc522.uid.uidByte[i] < 0x10 ? " 0" : " ");
