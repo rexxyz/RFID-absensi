@@ -40,6 +40,8 @@ void loop()
   if ( ! mfrc522.PICC_ReadCardSerial()) 
   {
     return;
+     //Menampilkan UID TAG Di Serial Monitor
+     Serial.print("UID tag :");
    
   }
      Serial.print(mfrc522.uid.uidByte[i] < 0x10 ? " 0" : " ");
