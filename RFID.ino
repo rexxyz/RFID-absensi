@@ -37,7 +37,7 @@ void loop()
   {
     return;
   }
-  if ( ! mfrc522.PICC_ReadCardSerial()) 
+  if ( ! mfrc522.PICC_ReadCardSerial()) //pembacaan nilai pada kartu RFID
   {
     return;
      //Menampilkan UID TAG Di Serial Monitor
@@ -74,7 +74,7 @@ void loop()
     myServo.write(70);
   }
  
- else   {
+ else   {//akses ditolak karena id tidak sesuai
     lcd.clear();
     lcd.setCursor(5, 0);
     lcd.print("AKSES");
