@@ -5,9 +5,9 @@
 
 #define SS_PIN 10
 #define RST_PIN 9
-#define LED_G 6 //Pin Led Biru
-#define LED_R 2 //Pin Led Putih
-#define BUZZER 4 //Pin Alarm
+#define LED_G 5 //Pin Led Hijau
+#define LED_R 4 //Pin Led Merah
+#define BUZZER 2 //Pin Buzzer
 MFRC522 mfrc522(SS_PIN, RST_PIN);   // deklarasi RFID
 Servo myServo; //Nama Servo
 LiquidCrystal_I2C lcd(0x3F ,2,1,0,4,5,6,7,3, POSITIVE);
@@ -15,7 +15,7 @@ LiquidCrystal_I2C lcd(0x3F ,2,1,0,4,5,6,7,3, POSITIVE);
 void setup() 
 {
   myServo.write(0);
-  delay(5000);
+  delay(1000);
   Serial.begin(9600);   //Komunikasi baud rate
   SPI.begin();
   mfrc522.PCD_Init();
@@ -24,11 +24,11 @@ void setup()
   pinMode(LED_R, OUTPUT);
   pinMode(BUZZER, OUTPUT);
   noTone(BUZZER);
-  lcd.begin(16,2);
+  lcd.begin(16,2); //lcd start
   lcd.setCursor(4,0);
-  lcd.print("DEKATKAN");
+  lcd.print("DEKAT");
   lcd.setCursor(5,1);
-  lcd.print("KARTU");
+  lcd.print("CARD");
 
 }
 void loop() 
@@ -41,7 +41,7 @@ void loop()
   {
     return;
      //Menampilkan UID TAG Di Serial Monitor
-     Serial.print("UID tag :");
+     Serial.print("UID tag :"); //pembacaan tag
      String content= "";
      byte letter;
    for (byte i = 0; i < mfrc522.uid.size; i++) 
