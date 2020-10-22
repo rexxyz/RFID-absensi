@@ -24,7 +24,7 @@ void setup()
   pinMode(LED_R, OUTPUT);
   pinMode(BUZZER, OUTPUT);
   noTone(BUZZER);
-  lcd.begin(16,2);
+  lcd.begin(16,2); //lcd start
   lcd.setCursor(4,0);
   lcd.print("DEKATKAN");
   lcd.setCursor(5,1);
@@ -41,7 +41,7 @@ void loop()
   {
     return;
      //Menampilkan UID TAG Di Serial Monitor
-     Serial.print("UID tag :");
+     Serial.print("UID tag :"); //pembacaan tag
      String content= "";
      byte letter;
    for (byte i = 0; i < mfrc522.uid.size; i++) 
