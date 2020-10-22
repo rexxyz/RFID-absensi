@@ -26,9 +26,9 @@ void setup()
   noTone(BUZZER);
   lcd.begin(16,2);
   lcd.setCursor(4,0);
-  lcd.print("DEKATKAN");
+  lcd.print("DEKAT");
   lcd.setCursor(5,1);
-  lcd.print("KARTU");
+  lcd.print("CARD");
 
 }
 void loop() 
