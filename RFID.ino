@@ -15,11 +15,11 @@ LiquidCrystal_I2C lcd(0x3F ,2,1,0,4,5,6,7,3, POSITIVE);
 void setup() 
 {
   myServo.write(0);
-  delay(5000);
+  delay(5000); //jangka waktu
   Serial.begin(9600);   //Komunikasi baud rate
   SPI.begin();
   mfrc522.PCD_Init();
-  myServo.attach(3);
+  myServo.attach(3); //pemanggilan servo
   pinMode(LED_G, OUTPUT);
   pinMode(LED_R, OUTPUT);
   pinMode(BUZZER, OUTPUT);
