@@ -33,6 +33,11 @@ void setup()
   lcd.print("DEKAT");
   lcd.setCursor(5,1);
   lcd.print("CARD");
+  //kaki kiri 2
+          Dxl.setPosition(ID_16,460,1000);
+          Dxl.setPosition(ID_17,430,1000);
+          Dxl.setPosition(ID_18,532,1000); 
+              //step0
 
 }
 void loop() 
