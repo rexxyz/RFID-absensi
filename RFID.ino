@@ -1,6 +1,6 @@
 #include <SPI.h>
-#include <MFRC522.h>
-#include <Servo.h>
+include <MFRC522.h>
+include <Servo.h>
 #include <LiquidCrystal_I2C.h>
 
 #define SS_PIN 10
