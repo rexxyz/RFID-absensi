@@ -29,7 +29,8 @@ void setup()
   myServo.write(0);//SERVO MULAI
   
   delay(5000); //jangka waktu
-=======
+
+  delay(1000); //delay 1 second
   delay(1000); //delay 1second
 
   Serial.begin(9600);   //Komunikasi baud rate
@@ -89,7 +90,7 @@ void loop()
      content.concat(String(mfrc522.uid.uidByte[i], HEX));
        delay(300);
     noTone(BUZZER);
-    digitalWrite(LED_G, LOW);
+    digitalWrite(LED_G, LOW); //kondisi led_g mati
     myServo.write(0);
     delay(5000); //delay 5 second
     myServo.write(70);
