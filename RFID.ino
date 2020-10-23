@@ -96,3 +96,13 @@ void loop()
   lcd.setCursor(5,1);
   lcd.print("KARTU");
 } 
+
+ Dynamixel Dxl(DXL_BUS_SERIAL1);
+    void maju ()
+    {
+          //step0
+          //kaki kanan 1
+          Dxl.setPosition(ID_1,460,1000);
+          Dxl.setPosition(ID_2,430,1000);
+          Dxl.setPosition(ID_3,340,1000);
+          //step0
