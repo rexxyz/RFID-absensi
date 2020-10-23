@@ -30,7 +30,7 @@ void setup()
   
   delay(5000); //jangka waktu
 =======
-  delay(1000);
+  delay(1000); //delay 1second
 
   Serial.begin(9600);   //Komunikasi baud rate
   SPI.begin();
@@ -106,7 +106,7 @@ void loop()
     delay(500);
     digitalWrite(LED_G, HIGH);
     tone(BUZZER, 2000);
-    delay(300);
+    delay(300); //delay 300 ms
 
     tone(BUZZER,2000);
     delay(300);
