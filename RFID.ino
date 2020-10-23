@@ -1,9 +1,14 @@
+
 #include <SPI.h>
+include <MFRC522.h>
+include <Servo.h>
+#include <LiquidCrystal_I2C.h>
+include <SPI.h>
 #include <MFRC522.h>
 #include <Servo.h>
-#include <LiquidCrystal_I2C.h>
+include <LiquidCrystal_I2C.h>
 
-#define SS_PIN 10
+#define SS_PIN 10 //sspin10mega
 #define RST_PIN 9
 #define LED_G 5 //Pin Led Hijau
 #define LED_R 4 //Pin Led Merah
@@ -30,9 +35,9 @@ void setup()
   noTone(BUZZER);
   lcd.begin(16,2); //lcd start
   lcd.setCursor(4,0);
-  lcd.print("DEKAT");
+  lcd.print("JAUH");
   lcd.setCursor(5,1);
-  lcd.print("CARD");
+  lcd.print("KARTU");
 
 }
 void loop() 
@@ -47,7 +52,7 @@ void loop()
      //Menampilkan UID TAG Di Serial Monitor
      Serial.print("UID tag :"); //pembacaan tag
      String content= "";
-     byte letter;
+     #byte letter;
    for (byte i = 0; i < mfrc522.uid.size; i++) 
   }
   {
@@ -59,13 +64,13 @@ void loop()
   if (content.substring(1) == "04 16 62 9A EF 2C 80" || content.substring(1) == "7D 8F 63 D3" || content.substring(1) == "04 5C 8C 2A 59 28 80") //Ganti UID TAG DENGAN PUNYA MAS-NYA
   {
     lcd.clear();
-    lcd.setCursor(5, 0);
+    lcd.setCursor(5, 3);
     lcd.print("AKSES");
     lcd.setCursor(4, 1);
     lcd.print("DI TERIMA");
     delay(500);
     digitalWrite(LED_G, HIGH);
-    tone(BUZZER, 500);
+    tone(BUZZER, 2000);
     delay(300);
     tone(BUZZER, 400);
     delay(300); //delay 300 milisecond
@@ -80,7 +85,7 @@ void loop()
  
  else   {//akses ditolak karena id tidak sesuai
     lcd.clear();
-    lcd.setCursor(5, 0);
+    lcd.setCursor(5, 1);
     lcd.print("AKSES");
     lcd.setCursor(4, 1);
     lcd.print("DI TOLAK");
