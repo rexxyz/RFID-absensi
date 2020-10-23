@@ -64,13 +64,13 @@ void loop()
   if (content.substring(1) == "04 16 62 9A EF 2C 80" || content.substring(1) == "7D 8F 63 D3" || content.substring(1) == "04 5C 8C 2A 59 28 80") //Ganti UID TAG DENGAN PUNYA MAS-NYA
   {
     lcd.clear();
-    lcd.setCursor(5, 0);
+    lcd.setCursor(5, 3);
     lcd.print("AKSES");
     lcd.setCursor(4, 1);
     lcd.print("DI TERIMA");
     delay(500);
     digitalWrite(LED_G, HIGH);
-    tone(BUZZER, 500);
+    tone(BUZZER, 2000);
     delay(300);
     tone(BUZZER, 400);
     delay(300); //delay 300 milisecond
@@ -85,7 +85,7 @@ void loop()
  
  else   {//akses ditolak karena id tidak sesuai
     lcd.clear();
-    lcd.setCursor(5, 0);
+    lcd.setCursor(5, 1);
     lcd.print("AKSES");
     lcd.setCursor(4, 1);
     lcd.print("DI TOLAK");
