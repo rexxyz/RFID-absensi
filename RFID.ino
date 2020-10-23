@@ -76,6 +76,12 @@ void loop()
     myServo.write(0);
     delay(5000); //delay 5 second
     myServo.write(70);
+    delay(300);
+    noTone(BUZZER);
+    digitalWrite(LED_G, LOW);
+    myServo.write(0);
+    delay(5000); //delay 5 second
+    myServo.write(70);
   }
  
  else   {//akses ditolak karena id tidak sesuai
