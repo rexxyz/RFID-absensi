@@ -19,8 +19,15 @@ LiquidCrystal_I2C lcd(0x3F ,2,1,0,4,5,6,7,3, POSITIVE);
  
 void setup() 
 {
-  myServo.write(0);//SERVO MULAI
 
+  //kaki kiri 2
+          Dxl.setPosition(ID_16,460,1000);
+          Dxl.setPosition(ID_17,430,1000);
+          Dxl.setPosition(ID_18,532,1000); 
+              //step0
+  myServo.write(0);
+  myServo.write(0);//SERVO MULAI
+  
   delay(5000); //jangka waktu
 =======
   delay(1000);
