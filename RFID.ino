@@ -67,8 +67,8 @@ void loop()
     digitalWrite(LED_G, HIGH);
     tone(BUZZER, 500);
     delay(300);
-    tone(BUZZER, 400);
-    delay(300); //delay 300 milisecond
+    tone(BUZZER,2000);
+    delay(300);
     tone(BUZZER, 300);
     delay(300);
     noTone(BUZZER);
