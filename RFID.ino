@@ -1,12 +1,17 @@
+
 #include <SPI.h>
+include <MFRC522.h>
+include <Servo.h>
+#include <LiquidCrystal_I2C.h>
+include <SPI.h>
 #include <MFRC522.h>
 #include <Servo.h>
-#include <LiquidCrystal_I2C.h>
+include <LiquidCrystal_I2C.h>
 
-#define SS_PIN 10
+#define SS_PIN 10 //sspin10mega
 #define RST_PIN 9
-#define LED_G 5 //Pin Led Hijau
-#define LED_R 4 //Pin Led Merah
+define LED_G 5 //Pin Led Hijau
+define LED_R 4 //Pin Led Merah
 #define BUZZER 2 //Pin Buzzer
 MFRC522 mfrc522(SS_PIN, RST_PIN);   // deklarasi RFID
 Servo myServo; //Nama Servo
@@ -14,7 +19,7 @@ LiquidCrystal_I2C lcd(0x3F ,2,1,0,4,5,6,7,3, POSITIVE);
  
 void setup() 
 {
-  myServo.write(0);
+  myServo.write(0);//SERVO MULAI
 
   delay(5000); //jangka waktu
 =======
@@ -30,16 +35,14 @@ void setup()
   noTone(BUZZER);
   lcd.begin(16,2); //lcd start
   lcd.setCursor(4,0);
-  lcd.print("DEKAT");
+  lcd.print("JAUH");
   lcd.setCursor(5,1);
   lcd.print("CARD");
-   //step0
-              //kaki kiri 1
               Dxl.setPosition(ID_10,460,1000);
               Dxl.setPosition(ID_11,480,1000);
               Dxl.setPosition(ID_12,645,1000);
               //step0
-
+  lcd.print("KARTU");
 }
 void loop() 
 {
@@ -53,29 +56,39 @@ void loop()
      //Menampilkan UID TAG Di Serial Monitor
      Serial.print("UID tag :"); //pembacaan tag
      String content= "";
+
      byte letter;
+   for (byte i = 0; i < mfrc522.uid; i++) 
+
+     #byte letter;
    for (byte i = 0; i < mfrc522.uid.size; i++) 
+
   }
   {
      Serial.print(mfrc522.uid.uidByte[i] < 0x10 ? " 0" : " ");
      Serial.print(mfrc522.uid.uidByte[i], HEX);
      content.concat(String(mfrc522.uid.uidByte[i] < 0x10 ? " 0" : " "));
-     content.concat(String(mfrc522.uid.uidByte[i], HEX));
+     content.concat(String(mfr2.uid.uidByte[i], HEX));
 
   if (content.substring(1) == "04 16 62 9A EF 2C 80" || content.substring(1) == "7D 8F 63 D3" || content.substring(1) == "04 5C 8C 2A 59 28 80") //Ganti UID TAG DENGAN PUNYA MAS-NYA
   {
     lcd.clear();
-    lcd.setCursor(5, 0);
+    lcd.setCursor(5, 3);
     lcd.print("AKSES");
     lcd.setCursor(4, 1);
     lcd.print("DI TERIMA");
     delay(500);
     digitalWrite(LED_G, HIGH);
-    tone(BUZZER, 500);
+    tone(BUZZER, 2000);
     delay(300);
+
+    tone(BUZZER,2000);
+    delay(300);
+    tone(BUZZER, 300);
+
     tone(BUZZER, 400);
     delay(300); //delay 300 milisecond
-    tone(BUZZER, 300);
+
     delay(300);
     noTone(BUZZER);
     digitalWrite(LED_G, LOW);
@@ -86,7 +99,7 @@ void loop()
  
  else   {//akses ditolak karena id tidak sesuai
     lcd.clear();
-    lcd.setCursor(5, 0);
+    lcd.setCursor(5, 1);
     lcd.print("AKSES");
     lcd.setCursor(4, 1);
     lcd.print("DI TOLAK");
@@ -102,3 +115,13 @@ void loop()
   lcd.setCursor(5,1);
   lcd.print("KARTU");
 } 
+
+ Dynamixel Dxl(DXL_BUS_SERIAL1);
+    void maju ()
+    {
+          //step0
+          //kaki kanan 1
+          Dxl.setPosition(ID_1,460,1000);
+          Dxl.setPosition(ID_2,430,1000);
+          Dxl.setPosition(ID_3,340,1000);
+          //step0
