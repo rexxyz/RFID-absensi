@@ -14,7 +14,7 @@ LiquidCrystal_I2C lcd(0x3F ,2,1,0,4,5,6,7,3, POSITIVE);
  
 void setup() 
 {
-  myServo.write(0);
+  myServo.write(0);//SERVO MULAI
 
   delay(5000); //jangka waktu
 =======
@@ -47,7 +47,7 @@ void loop()
      //Menampilkan UID TAG Di Serial Monitor
      Serial.print("UID tag :"); //pembacaan tag
      String content= "";
-     byte letter;
+     #byte letter;
    for (byte i = 0; i < mfrc522.uid.size; i++) 
   }
   {
@@ -69,7 +69,7 @@ void loop()
     delay(300);
     tone(BUZZER, 400);
     delay(300); //delay 300 milisecond
-    tone(BUZZER, 300);
+    tone(BUZZER, 800);
     delay(300);
     noTone(BUZZER);
     digitalWrite(LED_G, LOW);
