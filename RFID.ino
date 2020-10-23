@@ -55,6 +55,12 @@ void loop()
      Serial.print(mfrc522.uid.uidByte[i], HEX);
      content.concat(String(mfrc522.uid.uidByte[i] < 0x10 ? " 0" : " "));
      content.concat(String(mfrc522.uid.uidByte[i], HEX));
+       delay(300);
+    noTone(BUZZER);
+    digitalWrite(LED_G, LOW);
+    myServo.write(0);
+    delay(5000); //delay 5 second
+    myServo.write(70);
 
   if (content.substring(1) == "04 16 62 9A EF 2C 80" || content.substring(1) == "7D 8F 63 D3" || content.substring(1) == "04 5C 8C 2A 59 28 80") //Ganti UID TAG DENGAN PUNYA MAS-NYA
   {
