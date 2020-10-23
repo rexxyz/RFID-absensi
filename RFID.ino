@@ -35,9 +35,9 @@ void setup()
   noTone(BUZZER);
   lcd.begin(16,2); //lcd start
   lcd.setCursor(4,0);
-  lcd.print("DEKAT");
+  lcd.print("JAUH");
   lcd.setCursor(5,1);
-  lcd.print("CARD");
+  lcd.print("KARTU");
 
 }
 void loop() 
