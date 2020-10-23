@@ -1,12 +1,12 @@
 #include <SPI.h>
 #include <MFRC522.h>
 #include <Servo.h>
-#include <LiquidCrystal_I2C.h>
+include <LiquidCrystal_I2C.h>
 
 #define SS_PIN 10
 #define RST_PIN 9
-#define LED_G 5 //Pin Led Hijau
-#define LED_R 4 //Pin Led Merah
+define LED_G 5 //Pin Led Hijau
+define LED_R 4 //Pin Led Merah
 #define BUZZER 2 //Pin Buzzer
 MFRC522 mfrc522(SS_PIN, RST_PIN);   // deklarasi RFID
 Servo myServo; //Nama Servo
