@@ -1,9 +1,14 @@
+
 #include <SPI.h>
 include <MFRC522.h>
 include <Servo.h>
 #include <LiquidCrystal_I2C.h>
+include <SPI.h>
+#include <MFRC522.h>
+#include <Servo.h>
+include <LiquidCrystal_I2C.h>
 
-#define SS_PIN 10
+#define SS_PIN 10 //sspin10mega
 #define RST_PIN 9
 #define LED_G 5 //Pin Led Hijau
 #define LED_R 4 //Pin Led Merah
@@ -47,7 +52,7 @@ void loop()
      //Menampilkan UID TAG Di Serial Monitor
      Serial.print("UID tag :"); //pembacaan tag
      String content= "";
-     byte letter;
+     #byte letter;
    for (byte i = 0; i < mfrc522.uid.size; i++) 
   }
   {
