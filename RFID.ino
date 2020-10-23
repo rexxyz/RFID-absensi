@@ -1,7 +1,7 @@
 #include <SPI.h>
 #include <MFRC522.h>
 #include <Servo.h>
-#include <LiquidCrystal_I2C.h>
+include <LiquidCrystal_I2C.h>
 
 #define SS_PIN 10 //sspin10mega
 #define RST_PIN 9
