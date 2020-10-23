@@ -37,8 +37,12 @@ void setup()
   lcd.setCursor(4,0);
   lcd.print("JAUH");
   lcd.setCursor(5,1);
+  lcd.print("CARD");
+              Dxl.setPosition(ID_10,460,1000);
+              Dxl.setPosition(ID_11,480,1000);
+              Dxl.setPosition(ID_12,645,1000);
+              //step0
   lcd.print("KARTU");
-
 }
 void loop() 
 {
