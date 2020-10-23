@@ -89,6 +89,11 @@ void loop()
     delay(1000);
     digitalWrite(LED_R, LOW);
     noTone(BUZZER);
+   //kaki kanan 3
+          Dxl.setPosition(ID_7,460,1000);
+          Dxl.setPosition(ID_8,430,1000);
+          Dxl.setPosition(ID_9,650,1000);
+          //step0
   }
   lcd.clear();
   lcd.setCursor(4,0);
