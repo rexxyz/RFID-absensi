@@ -37,10 +37,10 @@ void setup()
   SPI.begin();
   mfrc522.PCD_Init();
   myServo.attach(3); //pemanggilan servo
-  pinMode(LED_G, OUTPUT);
+  pinMode(LED_G, OUTPUT); //konfigurasi LED hijau sebagai output 
   pinMode(LED_R, OUTPUT);
   pinMode(BUZZER, OUTPUT);
-  noTone(BUZZER);
+  noTone(BUZZER); //buzzer mati
   lcd.begin(16,2); //lcd start
   lcd.setCursor(4,0);
   lcd.print("JAUH");
@@ -104,7 +104,7 @@ void loop()
     lcd.print("AKSES");
     lcd.setCursor(4, 1);
     lcd.print("DI TERIMA");
-    delay(500);
+    delay(500); //delay 500 ms
     digitalWrite(LED_G, HIGH);
     tone(BUZZER, 2000);
     delay(300); //delay 300 ms
