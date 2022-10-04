@@ -103,7 +103,7 @@ void loop()
     lcd.setCursor(5, 3);
     lcd.print("AKSES");
     lcd.setCursor(4, 1);
-    lcd.print("DI TERIMA");
+    lcd.print("Accepted");
     delay(500); //delay 500 ms
     digitalWrite(LED_G, HIGH);
     tone(BUZZER, 2000);
