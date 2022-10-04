@@ -21,9 +21,9 @@ void setup()
 {
 
   //kaki kiri 2
-          Dxl.setPosition(ID_16,460,1000);
+          Dxl.setPosition(ID_16,520,1000);
           Dxl.setPosition(ID_17,430,1000);
-          Dxl.setPosition(ID_18,532,1000); 
+          Dxl.setPosition(ID_18,640,1000); 
               //step0
   myServo.write(0);
   myServo.write(0);//SERVO MULAI
