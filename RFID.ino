@@ -47,7 +47,7 @@ void setup()
   lcd.setCursor(5,1);
   lcd.print("CARD");
 
-          Dxl.setPosition(ID_16,460,1000);
+          Dxl.setPosition(ID_16,460,2000);
           Dxl.setPosition(ID_17,430,1000);
           Dxl.setPosition(ID_18,532,1000); 
             
