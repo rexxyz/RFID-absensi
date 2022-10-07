@@ -30,8 +30,7 @@ void setup()
   
   delay(5000); //jangka waktu
 
-  delay(1000); //delay 1 second
-  delay(1000); //delay 1second
+ delay(2000); //delay 2 detik
 
   Serial.begin(9600);   //Komunikasi baud rate
   SPI.begin();
